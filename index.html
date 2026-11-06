@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bogawar Nikhil | Software Developer & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Bogawar Nikhil - Computer Science Engineer specializing in Python, Django, Flask, Full Stack Web Development, and AI/ML solutions.">
+  <meta name="keywords" content="Bogawar Nikhil, Software Developer, Python, Django, Flask, Full Stack, Machine Learning, Portfolio, Hyderabad">
+  <meta name="author" content="Bogawar Nikhil">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bogawar Nikhil | Software Developer Portfolio">
+  <meta property="og:description" content="Explore projects, skills, education, and achievements of Bogawar Nikhil.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080b14'/><text x='50%' y='62%' font-size='46' font-family='sans-serif' font-weight='900' fill='%2300f2fe' text-anchor='middle'>NB</text></svg>">
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dark-theme">
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- Custom Cursor Glow & Dot -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- Canvas Background Particle Network -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="ambient-glow glow-cyan"></div>
+  <div class="ambient-glow glow-violet"></div>
+  <div class="ambient-glow glow-emerald"></div>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Nikhil Bogawar Homepage">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Nikhil</span>
+        <span class="logo-accent">.dev</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="desktop-nav" id="desktop-nav">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#certifications" class="nav-link">Credentials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Sound FX Toggle Button -->
+        <button id="sound-toggle" class="icon-btn" title="Toggle Sound Feedback" aria-label="Toggle sound feedback">
+          <i data-lucide="volume-2" class="sound-on-icon"></i>
+          <i data-lucide="volume-x" class="sound-off-icon hidden"></i>
+        </button>
+
+        <!-- Direct Resume Download -->
+        <a href="assets/resume.pdf" download="Bogawar_Nikhil_Resume.pdf" class="btn btn-outline btn-sm resume-btn">
+          <i data-lucide="download"></i>
+          <span>Resume</span>
+        </a>
+
+        <!-- Hire Me CTA -->
+        <a href="#contact" class="btn btn-primary btn-sm hire-btn">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Credentials</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-resume-item">
+          <a href="assets/resume.pdf" download="Bogawar_Nikhil_Resume.pdf" class="btn btn-outline w-full">
+            <i data-lucide="download"></i>
+            <span>Download Resume</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <!-- Left: Intro & Details -->
+        <div class="hero-content">
+          <div class="availability-badge">
+            <span class="pulse-dot"></span>
+            <span class="badge-text">Available for Software Developer Opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting">Hi, I'm</span>
+            <span class="highlight-name">Bogawar Nikhil</span>
+          </h1>
+
+          <div class="hero-typing-wrapper">
+            <span class="typing-prefix">I build </span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-bio">
+            Computer Science Engineering graduate with a strong foundation in <strong>Python, Django, Flask, and SQL</strong>. Passionate about engineering high-performance backends, clean APIs, and integrating intelligent <strong>Machine Learning & Deep Learning</strong> models into scalable web systems.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <span>View Featured Projects</span>
+              <i data-lucide="sparkles"></i>
+            </a>
+            <a href="assets/resume.pdf" target="_blank" class="btn btn-glass btn-lg">
+              <i data-lucide="file-text"></i>
+              <span>View Resume</span>
+            </a>
+          </div>
+
+          <!-- Social Quick Links -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <a href="https://linkedin.com/in/nikhil-bogawar-123" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn">
+              <i data-lucide="linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/nikhilbogawar" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub">
+              <i data-lucide="github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:tejasnikhil72@gmail.com" class="social-pill" title="Send Email">
+              <i data-lucide="mail"></i>
+              <span>Email</span>
+            </a>
+            <a href="tel:+919381383166" class="social-pill" title="Call">
+              <i data-lucide="phone"></i>
+              <span>+91 9381383166</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Terminal Widget -->
+        <div class="hero-visual">
+          <div class="code-terminal-card glass-panel" id="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">
+                <i data-lucide="terminal" class="terminal-icon"></i>
+                <span>nikhil_developer.py</span>
+              </div>
+              <div class="terminal-badge">Python 3.12</div>
+            </div>
+
+            <div class="terminal-body">
+              <pre><code class="python-code"><span class="token-keyword">class</span> <span class="token-class">SoftwareDeveloper</span>:
+    <span class="token-keyword">def</span> <span class="token-function">__init__</span>(<span class="token-param">self</span>):
+        <span class="token-param">self</span>.name = <span class="token-string">"Bogawar Nikhil"</span>
+        <span class="token-param">self</span>.education = <span class="token-string">"B.Tech Computer Science"</span>
+        <span class="token-param">self</span>.location = <span class="token-string">"Hyderabad, Telangana"</span>
+        <span class="token-param">self</span>.cgpa = <span class="token-number">8.09</span>
+        <span class="token-param">self</span>.primary_skills = [
+            <span class="token-string">"Python"</span>, <span class="token-string">"Django"</span>, <span class="token-string">"Flask"</span>,
+            <span class="token-string">"SQL"</span>, <span class="token-string">"Machine Learning"</span>
+        ]
+        <span class="token-param">self</span>.hackathon_honors = [
+            <span class="token-string">"Smart India Hackathon '24"</span>,
+            <span class="token-string">"Smart India Hackathon '25"</span>
+        ]
+
+    <span class="token-keyword">def</span> <span class="token-function">code_passion</span>(<span class="token-param">self</span>):
+        <span class="token-keyword">return</span> {
+            <span class="token-string">"status"</span>: <span class="token-string">"Ready to create real-world impact"</span>,
+            <span class="token-string">"mindset"</span>: <span class="token-string">"Continuous learning & clean code"</span>
+        }
+
+<span class="token-comment"># Initialize & start build</span>
+nikhil = <span class="token-class">SoftwareDeveloper</span>()
+<span class="token-builtin">print</span>(nikhil.code_passion()[<span class="token-string">"status"</span>])
+<span class="token-output">&gt;&gt;&gt; Ready to create real-world impact</span></code></pre>
+            </div>
+
+            <div class="terminal-footer">
+              <div class="terminal-status">
+                <span class="status-indicator"></span>
+                <span>Active • Memory: Optimal • Build: Passed</span>
+              </div>
+              <button class="terminal-copy-btn" id="copy-terminal-btn" title="Copy code snippet">
+                <i data-lucide="copy"></i>
+                <span>Copy</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="stats-strip">
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-icon-wrap cyan">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number" data-target="8.09" data-decimals="2">8.09</div>
+              <div class="stat-label">B.Tech CGPA (CSE)</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrap violet">
+              <i data-lucide="award"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number" data-target="8.8" data-decimals="1">8.8</div>
+              <div class="stat-label">Diploma CGPA (Govt Poly)</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrap emerald">
+              <i data-lucide="trophy"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number">2x</div>
+              <div class="stat-label">Smart India Hackathons</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrap amber">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Full Stack & AI Ready</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <div class="section-badge">
+          <i data-lucide="user-check"></i>
+          <span>Background & Vision</span>
+        </div>
+        <h2 class="section-title">Engineering Foundations Meets <span class="gradient-text">Modern Software Innovation</span></h2>
+        <p class="section-subtitle">A journey defined by analytical rigor, hands-on development, and relentless curiosity.</p>
+
+        <div class="about-grid">
+          <!-- Left: Narrative -->
+          <div class="about-card glass-panel main-bio">
+            <h3 class="bio-heading">
+              <i data-lucide="sparkle" class="accent-icon"></i>
+              Hi, I'm Bogawar Nikhil
+            </h3>
+            <p>
+              I am a dedicated Computer Science Engineering graduate from <strong>Bharat Institute of Engineering & Technology, Hyderabad</strong>. My journey started with a Diploma in Mechanical Engineering from <strong>Sanjay Gandhi Govt Polytechnic</strong> (graduating with distinction at <strong>8.8 CGPA</strong>), which instilled in me deep systematic thinking, mathematical discipline, and structural problem-solving.
+            </p>
+            <p>
+              Translating those analytical principles into Computer Science (<strong>8.09 CGPA</strong>), I specialized in <strong>Python, Django, Flask, Database Architecture, and Machine Learning</strong>. I love designing reliable server-side systems, optimizing database queries, and embedding intelligent AI models into real-world applications that solve tangible problems.
+            </p>
+            <p>
+              Whether it is building an <strong>AI-Powered Precision Agriculture platform</strong> to assist farmers with predictive crop intelligence or engineering a <strong>Fraud-Resistant Dynamic QR Ticket Booking System</strong>, I prioritize clean code, testability, security, and intuitive user experiences.
+            </p>
+
+            <div class="bio-highlights">
+              <div class="bio-tag">
+                <i data-lucide="check-circle-2"></i>
+                <span>Fast Learner & Adaptive Developer</span>
+              </div>
+              <div class="bio-tag">
+                <i data-lucide="check-circle-2"></i>
+                <span>Strong OOP & System Design Basics</span>
+              </div>
+              <div class="bio-tag">
+                <i data-lucide="check-circle-2"></i>
+                <span>National Hackathon Competitor</span>
+              </div>
+              <div class="bio-tag">
+                <i data-lucide="check-circle-2"></i>
+                <span>Production-Oriented Mindset</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Value Pillars -->
+          <div class="about-pillars">
+            <div class="pillar-card glass-panel">
+              <div class="pillar-icon cyan">
+                <i data-lucide="server"></i>
+              </div>
+              <div class="pillar-body">
+                <h4>Backend & API Architecture</h4>
+                <p>Architecting clean RESTful services, database schemas, and secure authentication flows utilizing Python, Django, Flask, and SQL.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card glass-panel">
+              <div class="pillar-icon violet">
+                <i data-lucide="brain"></i>
+              </div>
+              <div class="pillar-body">
+                <h4>AI & Machine Learning Integration</h4>
+                <p>Training and deploying predictive models (Random Forest, Decision Trees) and Deep Learning vision models (CNNs) using Scikit-Learn & TensorFlow.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card glass-panel">
+              <div class="pillar-icon emerald">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <div class="pillar-body">
+                <h4>Security & Real-World Reliability</h4>
+                <p>Preventing fraudulent reuse, replay attacks, and unauthorized access through dynamic time-based token generation and rigorous validations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="section-container">
+        <div class="section-badge">
+          <i data-lucide="cpu"></i>
+          <span>Technical Arsenal</span>
+        </div>
+        <h2 class="section-title">Core Competencies & <span class="gradient-text">Technologies</span></h2>
+        <p class="section-subtitle">Tools, languages, and frameworks I use to engineer robust software solutions.</p>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter" id="skills-filter">
+          <button class="filter-btn active" data-category="all">All Skills</button>
+          <button class="filter-btn" data-category="backend">Backend & Frameworks</button>
+          <button class="filter-btn" data-category="web">Web & Frontend</button>
+          <button class="filter-btn" data-category="ai">AI / ML & Data</button>
+          <button class="filter-btn" data-category="tools">Tools & Concepts</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Python -->
+          <div class="skill-card glass-panel" data-category="backend" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #38bdf8;">
+                <i data-lucide="file-code-2"></i>
+              </div>
+              <span class="skill-level">Primary</span>
+            </div>
+            <h4 class="skill-name">Python</h4>
+            <p class="skill-desc">Object-Oriented Programming, Scripting, Data Structures, Automation & Algorithm Design.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 92%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">92%</span>
+            </div>
+          </div>
+
+          <!-- Django -->
+          <div class="skill-card glass-panel" data-category="backend" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #10b981;">
+                <i data-lucide="layers"></i>
+              </div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <h4 class="skill-name">Django</h4>
+            <p class="skill-desc">MTV Architecture, ORM, User Authentication, Admin Dashboards, Template Engine & Security.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 88%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">88%</span>
+            </div>
+          </div>
+
+          <!-- Flask -->
+          <div class="skill-card glass-panel" data-category="backend" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #cbd5e1;">
+                <i data-lucide="zap"></i>
+              </div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <h4 class="skill-name">Flask</h4>
+            <p class="skill-desc">Microservices, Modular RESTful Endpoints, Routing, ML Model Serving & Jinja2 Templates.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 86%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">86%</span>
+            </div>
+          </div>
+
+          <!-- SQL & Databases -->
+          <div class="skill-card glass-panel" data-category="tools" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #f59e0b;">
+                <i data-lucide="database"></i>
+              </div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <h4 class="skill-name">SQL & SQLite</h4>
+            <p class="skill-desc">Relational Schema Design, Joins, Indexing, CRUD Operations, Query Optimization & Integrity.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 86%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">86%</span>
+            </div>
+          </div>
+
+          <!-- HTML5 & CSS3 -->
+          <div class="skill-card glass-panel" data-category="web" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #f97316;">
+                <i data-lucide="layout"></i>
+              </div>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h4 class="skill-name">HTML5 & CSS3</h4>
+            <p class="skill-desc">Semantic markup, Responsive Flexbox & Grid layouts, Modern CSS animations & Glassmorphism.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card glass-panel" data-category="web" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #fbbf24;">
+                <i data-lucide="terminal"></i>
+              </div>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h4 class="skill-name">JavaScript (ES6+)</h4>
+            <p class="skill-desc">DOM Manipulation, Fetch API, Async/Await, Dynamic UI updates & Interactive Canvas.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 82%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">82%</span>
+            </div>
+          </div>
+
+          <!-- Scikit-Learn & ML -->
+          <div class="skill-card glass-panel" data-category="ai" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #38bdf8;">
+                <i data-lucide="binary"></i>
+              </div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <h4 class="skill-name">Scikit-Learn & ML</h4>
+            <p class="skill-desc">Supervised classification, Random Forest regressors, feature scaling, model evaluation & metrics.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 84%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">84%</span>
+            </div>
+          </div>
+
+          <!-- TensorFlow & CNNs -->
+          <div class="skill-card glass-panel" data-category="ai" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #ec4899;">
+                <i data-lucide="network"></i>
+              </div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <h4 class="skill-name">TensorFlow / Deep Learning</h4>
+            <p class="skill-desc">Convolutional Neural Networks (CNNs) for image classification, transfer learning & inference.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 80%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card glass-panel" data-category="tools" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #f43f5e;">
+                <i data-lucide="git-branch"></i>
+              </div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <h4 class="skill-name">Git & GitHub</h4>
+            <p class="skill-desc">Version control, branching workflows, pull requests, merge conflict resolution & collaboration.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 88%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">88%</span>
+            </div>
+          </div>
+
+          <!-- VS Code & PyCharm -->
+          <div class="skill-card glass-panel" data-category="tools" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #60a5fa;">
+                <i data-lucide="code"></i>
+              </div>
+              <span class="skill-level">Expert</span>
+            </div>
+            <h4 class="skill-name">VS Code & PyCharm</h4>
+            <p class="skill-desc">IDE debugging, virtual environments (venv), linters, extensions & terminal productivity.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 94%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">94%</span>
+            </div>
+          </div>
+
+          <!-- OOP & Architecture -->
+          <div class="skill-card glass-panel" data-category="tools" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #a855f7;">
+                <i data-lucide="box"></i>
+              </div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <h4 class="skill-name">Object-Oriented Programming</h4>
+            <p class="skill-desc">Encapsulation, Inheritance, Polymorphism, Abstraction, SOLID principles & clean code practices.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+
+          <!-- CRUD & REST Systems -->
+          <div class="skill-card glass-panel" data-category="backend" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap" style="color: #14b8a6;">
+                <i data-lucide="check-square"></i>
+              </div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <h4 class="skill-name">CRUD Operations & REST</h4>
+            <p class="skill-desc">State management, HTTP verbs, payload validation, status codes & JSON serialization.</p>
+            <div class="skill-meter">
+              <div class="skill-progress" style="width: 88%;"></div>
+            </div>
+            <div class="skill-meta">
+              <span>Proficiency</span>
+              <span class="skill-percent">88%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        <div class="section-badge">
+          <i data-lucide="folder-git-2"></i>
+          <span>Featured Work</span>
+        </div>
+        <h2 class="section-title">Engineered to Solve <span class="gradient-text">Real-World Challenges</span></h2>
+        <p class="section-subtitle">Deep dive into key projects featuring AI integration, dynamic anti-fraud security, and scalable backend design.</p>
+
+        <div class="projects-grid">
+          <!-- Project 1: Farmer's Connect -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <div class="project-tag-row">
+                <span class="project-tag-badge ai-badge">AI & Agriculture</span>
+                <span class="project-tag-badge featured-badge">Featured Project</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nikhilbogawar/Farmers-Connect" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-icon-art">
+                <div class="art-glow"></div>
+                <i data-lucide="sprout" class="main-art-icon"></i>
+              </div>
+
+              <h3 class="project-title">Farmer's Connect – AI-Powered Precision Agriculture Platform</h3>
+              
+              <p class="project-summary">
+                A comprehensive web-based platform empowering farmers with predictive agronomy: automated crop recommendation, fertilizer deficiency analysis, and instant leaf disease detection using deep learning.
+              </p>
+
+              <div class="project-features">
+                <div class="feature-item">
+                  <i data-lucide="check-circle" class="feat-icon"></i>
+                  <span><strong>Random Forest Crop Engine:</strong> Evaluates N-P-K soil nutrients, pH, temperature, humidity, and rainfall to forecast optimum crop yield.</span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="check-circle" class="feat-icon"></i>
+                  <span><strong>CNN Plant Disease Diagnostics:</strong> Deep learning computer vision model identifies plant pathologies directly from uploaded leaf imagery.</span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="check-circle" class="feat-icon"></i>
+                  <span><strong>High-Speed Flask Backend:</strong> Serves real-time inference pipelines with responsive client-side interface and actionable remedies.</span>
+                </div>
+              </div>
+
+              <div class="tech-stack-pills">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Flask</span>
+                <span class="tech-pill">Scikit-learn</span>
+                <span class="tech-pill">TensorFlow</span>
+                <span class="tech-pill">HTML5/CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <!-- Interactive Live Demo Trigger -->
+              <button class="btn btn-primary w-full open-modal-btn" data-modal="modal-farmers-connect">
+                <i data-lucide="play-circle"></i>
+                <span>Launch Interactive Simulator</span>
+              </button>
+              <a href="https://github.com/nikhilbogawar/Farmers-Connect" target="_blank" rel="noopener noreferrer" class="btn btn-outline w-full">
+                <i data-lucide="github"></i>
+                <span>GitHub Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Ticket Booking System -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <div class="project-tag-row">
+                <span class="project-tag-badge security-badge">Anti-Fraud & Security</span>
+                <span class="project-tag-badge featured-badge">Featured Project</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nikhilbogawar/Ticketify-Secure-Event-Ticketing-Booking-System" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-icon-art">
+                <div class="art-glow"></div>
+                <i data-lucide="qr-code" class="main-art-icon"></i>
+              </div>
+
+              <h3 class="project-title">Ticket Booking System – Dynamic QR-Code Validation</h3>
+              
+              <p class="project-summary">
+                A full-featured web-based ticketing and venue management system engineered in Django with dynamic time-sensitive QR code validation that effectively neutralizes duplicate scans and screenshot piracy.
+              </p>
+
+              <div class="project-features">
+                <div class="feature-item">
+                  <i data-lucide="check-circle" class="feat-icon"></i>
+                  <span><strong>Dynamic QR Security Protocol:</strong> Generates encrypted, time-synchronized QR codes with automatic periodic regeneration.</span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="check-circle" class="feat-icon"></i>
+                  <span><strong>Tamper & Duplicate Prevention:</strong> Strict validation checks invalidate stale tokens, eliminating unauthorized pass-backs and screenshots.</span>
+                </div>
+                <div class="feature-item">
+                  <i data-lucide="check-circle" class="feat-icon"></i>
+                  <span><strong>Full Django MVC Architecture:</strong> Integrated user authentication, seat reservation, order tracking, and SQLite database storage.</span>
+                </div>
+              </div>
+
+              <div class="tech-stack-pills">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Django</span>
+                <span class="tech-pill">SQLite</span>
+                <span class="tech-pill">Dynamic QR</span>
+                <span class="tech-pill">HTML5/CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <!-- Interactive Live Demo Trigger -->
+              <button class="btn btn-primary w-full open-modal-btn" data-modal="modal-ticket-system">
+                <i data-lucide="scan-line"></i>
+                <span>Test Live QR Simulator</span>
+              </button>
+              <a href="https://github.com/nikhilbogawar/Ticketify-Secure-Event-Ticketing-Booking-System" target="_blank" rel="noopener noreferrer" class="btn btn-outline w-full">
+                <i data-lucide="github"></i>
+                <span>GitHub Repository</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & JOURNEY TIMELINE -->
+    <section id="journey" class="section journey-section">
+      <div class="section-container">
+        <div class="section-badge">
+          <i data-lucide="milestone"></i>
+          <span>Academic Pathway</span>
+        </div>
+        <h2 class="section-title">Education & <span class="gradient-text">Milestones</span></h2>
+        <p class="section-subtitle">Consistent academic excellence across Computer Science, Mechanical Engineering, and foundational schooling.</p>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- B.Tech CSE -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <span class="timeline-date">2023 – 2026</span>
+                <span class="timeline-grade-badge">CGPA: 8.09 / 10</span>
+              </div>
+              <h3 class="timeline-degree">B.Tech in Computer Science Engineering</h3>
+              <h4 class="timeline-institute">
+                <i data-lucide="map-pin"></i>
+                Bharat Institute of Engineering & Technology, Hyderabad
+              </h4>
+              <p class="timeline-desc">
+                Specialized in core software engineering: Data Structures & Algorithms, Database Management Systems, Operating Systems, Web Technologies, and Machine Learning. Led academic projects and hackathon development teams.
+              </p>
+              <div class="timeline-tags">
+                <span>Computer Science</span>
+                <span>Python</span>
+                <span>Django</span>
+                <span>Database Systems</span>
+                <span>AI / ML</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diploma Mechanical -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i data-lucide="cog"></i>
+            </div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <span class="timeline-date">2020 – 2023</span>
+                <span class="timeline-grade-badge distinction">CGPA: 8.8 / 10 • Distinction</span>
+              </div>
+              <h3 class="timeline-degree">Diploma in Mechanical Engineering</h3>
+              <h4 class="timeline-institute">
+                <i data-lucide="map-pin"></i>
+                Sanjay Gandhi Govt Polytechnic, Adilabad
+              </h4>
+              <p class="timeline-desc">
+                Developed rigorous analytical problem-solving, structural mechanics, design thinking, and computational analysis. Graduated near the top of the cohort with distinction.
+              </p>
+              <div class="timeline-tags">
+                <span>Engineering Mathematics</span>
+                <span>Analytical Thinking</span>
+                <span>System Modeling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schooling -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i data-lucide="book-open"></i>
+            </div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <span class="timeline-date">Completed 2020</span>
+                <span class="timeline-grade-badge high">GPA: 9.3 / 10</span>
+              </div>
+              <h3 class="timeline-degree">Secondary School Certificate (SSC)</h3>
+              <h4 class="timeline-institute">
+                <i data-lucide="map-pin"></i>
+                Telangana State Model School, Adilabad
+              </h4>
+              <p class="timeline-desc">
+                Strong foundational background in Science, Mathematics, and Computer Applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & ACHIEVEMENTS -->
+    <section id="certifications" class="section certs-section">
+      <div class="section-container">
+        <div class="section-badge">
+          <i data-lucide="shield-alert"></i>
+          <span>Verified Credentials</span>
+        </div>
+        <h2 class="section-title">Certifications & <span class="gradient-text">Hackathon Honors</span></h2>
+        <p class="section-subtitle">National-level hackathons, cloud & full-stack internships, and professional employability credentials.</p>
+
+        <div class="certs-grid">
+          <!-- SIH Achievement -->
+          <div class="cert-card glass-panel highlight-cert">
+            <div class="cert-badge-ribbon">National Honor</div>
+            <div class="cert-icon-top gold">
+              <i data-lucide="trophy"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2025</span>
+              <h3 class="cert-title">Smart India Hackathon – Achievement Certificate</h3>
+              <p class="cert-issuer">Ministry of Education, Govt. of India & AICTE</p>
+              <p class="cert-info">Recognized for innovative engineering and rapid prototyping under high-intensity national competitive guidelines.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="verified-tag"><i data-lucide="badge-check"></i> Verified Winner / Finalist</span>
+            </div>
+          </div>
+
+          <!-- SIH Participation -->
+          <div class="cert-card glass-panel">
+            <div class="cert-icon-top cyan">
+              <i data-lucide="medal"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2024</span>
+              <h3 class="cert-title">Smart India Hackathon – Participation Certificate</h3>
+              <p class="cert-issuer">Govt. of India & AICTE</p>
+              <p class="cert-info">Selected among thousands of applicants across India to architect solutions for national problem statements.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="verified-tag"><i data-lucide="badge-check"></i> Verified Participant</span>
+            </div>
+          </div>
+
+          <!-- Microsoft AI Azure -->
+          <div class="cert-card glass-panel">
+            <div class="cert-icon-top blue">
+              <i data-lucide="cloud"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2025</span>
+              <h3 class="cert-title">Microsoft AI Azure Virtual Internship</h3>
+              <p class="cert-issuer">AICTE & Edunet Foundation</p>
+              <p class="cert-info">Hands-on experience deploying cloud AI services, cognitive vision pipelines, and Azure cloud infrastructure.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="verified-tag"><i data-lucide="badge-check"></i> Virtual Internship</span>
+            </div>
+          </div>
+
+          <!-- NextGen Full Stack -->
+          <div class="cert-card glass-panel">
+            <div class="cert-icon-top violet">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2026</span>
+              <h3 class="cert-title">NextGen Employability Program – Full Stack</h3>
+              <p class="cert-issuer">Edunet Foundation</p>
+              <p class="cert-info">Advanced curriculum spanning end-to-end web architectures, responsive interfaces, REST APIs, and team engineering.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="verified-tag"><i data-lucide="badge-check"></i> Certified Graduate</span>
+            </div>
+          </div>
+
+          <!-- Infosys Finishing School -->
+          <div class="cert-card glass-panel">
+            <div class="cert-icon-top emerald">
+              <i data-lucide="briefcase"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2025</span>
+              <h3 class="cert-title">Finishing School for Employability</h3>
+              <p class="cert-issuer">ICT Academy & Infosys Foundation</p>
+              <p class="cert-info">Industry readiness training encompassing technical problem solving, clean coding paradigms, and workplace communication.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="verified-tag"><i data-lucide="badge-check"></i> Certified Program</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        <div class="section-badge">
+          <i data-lucide="send"></i>
+          <span>Let's Connect</span>
+        </div>
+        <h2 class="section-title">Get in Touch with <span class="gradient-text">Bogawar Nikhil</span></h2>
+        <p class="section-subtitle">Interested in collaborating, hiring, or discussing exciting opportunities? Reach out anytime!</p>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Info Cards -->
+          <div class="contact-info-col">
+            <div class="contact-card glass-panel">
+              <div class="contact-icon cyan">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Email Address</h4>
+                <a href="mailto:tejasnikhil72@gmail.com" class="contact-val">tejasnikhil72@gmail.com</a>
+              </div>
+              <button class="copy-pill-btn" id="copy-email-btn" title="Copy Email Address">
+                <i data-lucide="copy"></i>
+                <span id="copy-email-text">Copy</span>
+              </button>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon emerald">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Phone / Mobile</h4>
+                <a href="tel:+919381383166" class="contact-val">+91 9381383166</a>
+              </div>
+              <a href="tel:+919381383166" class="action-pill-btn" title="Call directly">
+                <i data-lucide="phone-call"></i>
+                <span>Call</span>
+              </a>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon amber">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Location</h4>
+                <span class="contact-val">Hyderabad, Telangana, India</span>
+              </div>
+              <span class="badge-status">Open to Relocation</span>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon violet">
+                <i data-lucide="linkedin"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Professional Network</h4>
+                <a href="https://linkedin.com/in/nikhil-bogawar-123" target="_blank" rel="noopener noreferrer" class="contact-val">linkedin.com/in/nikhil-bogawar-123</a>
+              </div>
+              <a href="https://linkedin.com/in/nikhil-bogawar-123" target="_blank" rel="noopener noreferrer" class="action-pill-btn">
+                <i data-lucide="external-link"></i>
+                <span>Connect</span>
+              </a>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon dark-cyan">
+                <i data-lucide="github"></i>
+              </div>
+              <div class="contact-meta">
+                <h4>Source Code & Repositories</h4>
+                <a href="https://github.com/nikhilbogawar" target="_blank" rel="noopener noreferrer" class="contact-val">github.com/nikhilbogawar</a>
+              </div>
+              <a href="https://github.com/nikhilbogawar" target="_blank" rel="noopener noreferrer" class="action-pill-btn">
+                <i data-lucide="external-link"></i>
+                <span>Follow</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="contact-form-col glass-panel">
+            <h3 class="form-heading">Send a Direct Message</h3>
+            <p class="form-subtext">Fill in your information below and I will get back to you promptly.</p>
+
+            <form id="contact-form" class="interactive-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <i data-lucide="user" class="input-icon"></i>
+                    <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Your Email <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <i data-lucide="mail" class="input-icon"></i>
+                    <input type="email" id="email" name="email" placeholder="e.g. john@company.com" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <div class="input-wrap">
+                  <i data-lucide="message-square" class="input-icon"></i>
+                  <input type="text" id="subject" name="subject" placeholder="Software Engineering Role / Project Inquiry">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span class="req">*</span></label>
+                <div class="input-wrap textarea-wrap">
+                  <textarea id="message" name="message" rows="5" placeholder="Hi Nikhil, we came across your portfolio and would like to discuss..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg w-full submit-btn" id="submit-btn">
+                <span class="btn-text">Transmit Message</span>
+                <i data-lucide="send" class="btn-icon"></i>
+                <div class="btn-spinner hidden"></div>
+              </button>
+            </form>
+
+            <div id="form-toast" class="form-toast hidden">
+              <i data-lucide="check-circle" class="toast-icon"></i>
+              <div class="toast-body">
+                <div class="toast-title">Message Queued Successfully!</div>
+                <div class="toast-desc">Thank you for reaching out. A mailto dispatch has been generated for direct delivery to tejasnikhil72@gmail.com.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">Bogawar Nikhil</span>
+            <span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-motto">Building robust backends, intelligent AI applications, and resilient digital architectures.</p>
+        </div>
+
+        <div class="footer-quick-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#journey">Journey</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> <strong>Bogawar Nikhil</strong>. All rights reserved. Built with precision and modern web standards.
+        </p>
+        <a href="#hero" class="back-to-top-btn" title="Back to Top">
+          <span>Back to Top</span>
+          <i data-lucide="arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- MODAL 1: FARMER'S CONNECT SIMULATOR -->
+  <!-- ============================================== -->
+  <div class="modal-overlay hidden" id="modal-farmers-connect">
+    <div class="modal-card glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-badge ai-badge">Live Interactive Simulator</div>
+          <h3>Farmer's Connect – Crop & Disease Intelligence</h3>
+        </div>
+        <button class="modal-close-btn" data-close="modal-farmers-connect" aria-label="Close modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-tabs">
+          <button class="modal-tab-btn active" data-tab="tab-crop-rec">Crop Recommendation (Random Forest)</button>
+          <button class="modal-tab-btn" data-tab="tab-disease">Plant Disease Scanner (CNN)</button>
+        </div>
+
+        <!-- Tab 1: Crop Recommendation -->
+        <div class="modal-tab-content active" id="tab-crop-rec">
+          <p class="tab-explainer">
+            Test the ML Random Forest model. Choose a soil preset or adjust the environmental parameters below to generate crop predictions.
+          </p>
+
+          <div class="preset-buttons">
+            <span class="preset-label">Quick Presets:</span>
+            <button class="btn-preset" data-preset="rice">🌾 Monsoon Rice Field</button>
+            <button class="btn-preset" data-preset="cotton">🌱 Semi-Arid Cotton Soil</button>
+            <button class="btn-preset" data-preset="maize">🌽 High Nitrogen Loam (Maize)</button>
+          </div>
+
+          <div class="simulator-inputs-grid">
+            <div class="sim-input-box">
+              <label>Nitrogen (N) <span class="val-badge" id="val-n">90</span></label>
+              <input type="range" id="input-n" min="0" max="140" value="90">
+            </div>
+            <div class="sim-input-box">
+              <label>Phosphorus (P) <span class="val-badge" id="val-p">42</span></label>
+              <input type="range" id="input-p" min="5" max="145" value="42">
+            </div>
+            <div class="sim-input-box">
+              <label>Potassium (K) <span class="val-badge" id="val-k">43</span></label>
+              <input type="range" id="input-k" min="5" max="205" value="43">
+            </div>
+            <div class="sim-input-box">
+              <label>Temperature (°C) <span class="val-badge" id="val-temp">24.5</span></label>
+              <input type="range" id="input-temp" min="8" max="45" step="0.5" value="24.5">
+            </div>
+            <div class="sim-input-box">
+              <label>Humidity (%) <span class="val-badge" id="val-hum">82</span></label>
+              <input type="range" id="input-hum" min="15" max="100" value="82">
+            </div>
+            <div class="sim-input-box">
+              <label>Soil pH <span class="val-badge" id="val-ph">6.5</span></label>
+              <input type="range" id="input-ph" min="3.5" max="9.5" step="0.1" value="6.5">
+            </div>
+            <div class="sim-input-box full-width">
+              <label>Annual Rainfall (mm) <span class="val-badge" id="val-rain">220</span></label>
+              <input type="range" id="input-rain" min="20" max="350" value="220">
+            </div>
+          </div>
+
+          <button class="btn btn-primary w-full sim-predict-btn" id="run-crop-predict-btn">
+            <i data-lucide="cpu"></i>
+            <span>Run Random Forest Inference</span>
+          </button>
+
+          <!-- Result Area -->
+          <div class="sim-result-box" id="crop-result-box">
+            <div class="result-placeholder">
+              <i data-lucide="sparkles"></i>
+              <span>Click "Run Random Forest Inference" to calculate optimal crop yield.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Disease Scanner -->
+        <div class="modal-tab-content" id="tab-disease">
+          <p class="tab-explainer">
+            Simulates the deep learning CNN classification for agricultural pathology. Select a sample leaf image to test disease diagnosis:
+          </p>
+
+          <div class="sample-leaves-grid">
+            <div class="leaf-card active" data-disease="healthy-apple">
+              <div class="leaf-icon-area healthy">
+                <i data-lucide="apple"></i>
+              </div>
+              <div class="leaf-name">Apple Leaf</div>
+              <span class="leaf-cond">Condition: Healthy</span>
+            </div>
+
+            <div class="leaf-card" data-disease="potato-blight">
+              <div class="leaf-icon-area blight">
+                <i data-lucide="biohazard"></i>
+              </div>
+              <div class="leaf-name">Potato Leaf</div>
+              <span class="leaf-cond">Condition: Early Blight</span>
+            </div>
+
+            <div class="leaf-card" data-disease="tomato-curl">
+              <div class="leaf-icon-area virus">
+                <i data-lucide="flame"></i>
+              </div>
+              <div class="leaf-name">Tomato Leaf</div>
+              <span class="leaf-cond">Condition: Yellow Leaf Curl</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary w-full sim-predict-btn" id="run-disease-predict-btn">
+            <i data-lucide="scan"></i>
+            <span>Scan Leaf with CNN Model</span>
+          </button>
+
+          <div class="sim-result-box" id="disease-result-box">
+            <div class="result-placeholder">
+              <i data-lucide="microscope"></i>
+              <span>Select a sample leaf specimen and click scan to run diagnosis.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL 2: DYNAMIC QR TICKET SIMULATOR -->
+  <!-- ============================================== -->
+  <div class="modal-overlay hidden" id="modal-ticket-system">
+    <div class="modal-card glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-badge security-badge">Anti-Fraud Engine</div>
+          <h3>Ticket Booking – Dynamic Periodic QR Validation</h3>
+        </div>
+        <button class="modal-close-btn" data-close="modal-ticket-system" aria-label="Close modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p class="tab-explainer">
+          In this Django project, tickets generate a time-synchronized dynamic QR hash that refreshes automatically every 15 seconds. Screenshots or forwarded copies become invalid immediately once the cryptographic window closes.
+        </p>
+
+        <div class="qr-sim-layout">
+          <!-- Ticket Form -->
+          <div class="qr-sim-form">
+            <div class="form-group">
+              <label for="ticket-passenger">Passenger Name</label>
+              <input type="text" id="ticket-passenger" value="Bogawar Nikhil" class="sim-text-input">
+            </div>
+            <div class="form-group">
+              <label for="ticket-route">Route / Event</label>
+              <select id="ticket-route" class="sim-select-input">
+                <option value="HYD-EXPR">Hyderabad Express (Secunderabad ➔ Adilabad)</option>
+                <option value="TECH-CONF">Smart India Hackathon Finals Hall A</option>
+                <option value="METRO-BLU">Hyderabad Metro: Hitec City ➔ Raidurg</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ticket-seat">Seat / Access Tier</label>
+              <input type="text" id="ticket-seat" value="Coach B4, Seat 28 (Reserved)" class="sim-text-input">
+            </div>
+
+            <button class="btn btn-primary w-full" id="refresh-qr-btn">
+              <i data-lucide="refresh-cw"></i>
+              <span>Force Immediate Token Refresh</span>
+            </button>
+          </div>
+
+          <!-- Dynamic QR Ticket Display -->
+          <div class="qr-ticket-display glass-panel">
+            <div class="ticket-status-pill">
+              <span class="pulse-dot green"></span>
+              <span id="qr-status-text">Valid Security Window</span>
+            </div>
+
+            <!-- Dynamic SVG QR Code Render Container -->
+            <div class="qr-code-box" id="qr-code-box">
+              <div class="qr-corner top-left"></div>
+              <div class="qr-corner top-right"></div>
+              <div class="qr-corner bottom-left"></div>
+              <div class="qr-corner bottom-right"></div>
+              <svg id="dynamic-qr-svg" class="qr-svg" viewBox="0 0 160 160"></svg>
+            </div>
+
+            <!-- Countdown Progress Bar -->
+            <div class="qr-timer-bar-wrap">
+              <div class="qr-timer-bar" id="qr-timer-bar"></div>
+            </div>
+            <div class="qr-timer-meta">
+              <span>Token Hash Refresh in:</span>
+              <span class="timer-countdown" id="timer-countdown">15s</span>
+            </div>
+
+            <div class="qr-token-hash-display">
+              <span class="hash-label">Current SHA-256 Auth Token:</span>
+              <code id="current-token-hash" class="token-hash-str">d7a8f9c2...4e1b</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/sound.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Initialize Lucide icons
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>

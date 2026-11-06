@@ -1,0 +1,22 @@
+{
+  "name": "nikhil-bogawar-portfolio",
+  "version": "1.0.0",
+  "description": "High-performance animated portfolio for Bogawar Nikhil - Software Developer & AI Enthusiast",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve -l 3000 ."
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "python",
+    "django",
+    "machine-learning",
+    "ai",
+    "glassmorphism",
+    "interactive"
+  ],
+  "author": "Bogawar Nikhil",
+  "license": "MIT"
+}

@@ -1,0 +1,153 @@
+/* ===================================================================
+   RESPONSIVE LAYOUT & MEDIA QUERIES
+   =================================================================== */
+
+/* Large Tablets & Small Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .hero-visual {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-sim-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium Tablets & Mobile Landscape (<= 768px) */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .hero-section {
+    padding-top: 100px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-typing-wrapper {
+    font-size: 1.15rem;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-inputs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sim-input-box.full-width {
+    grid-column: span 2;
+  }
+
+  .sample-leaves-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-wrapper {
+    padding-left: 24px;
+  }
+
+  .timeline-marker {
+    left: -24px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .timeline-line {
+    left: 8px;
+  }
+
+  .modal-card {
+    padding: 20px;
+  }
+
+  /* Disable custom cursor on touch devices */
+  .cursor-dot, .cursor-glow {
+    display: none !important;
+  }
+}
+
+/* Small Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hire-btn {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator-inputs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-input-box.full-width {
+    grid-column: span 1;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
